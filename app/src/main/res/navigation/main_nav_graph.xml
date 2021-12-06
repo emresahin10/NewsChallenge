@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/newsSourcesFragment">
+
+    <fragment
+        android:id="@+id/newsSourcesFragment"
+        android:name="com.denbase.newschallenge.ui.NewsSourcesFragment"
+        android:label="@string/news_sources"
+        tools:layout="@layout/fragment_news_sources" >
+        <action
+            android:id="@+id/action_newsSourcesFragment_to_newsFragment"
+            app:destination="@id/newsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="sourceId"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="sourceName"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.denbase.newschallenge.ui.NewsFragment"
+        android:label="{sourceName}"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_newsFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.denbase.newschallenge.ui.NewsDetailFragment"
+        android:label="@string/detail"
+        tools:layout="@layout/fragment_news_detail" >
+        <argument
+            android:name="article"
+            app:argType="com.denbase.newschallenge.data.model.Article" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newsSavedFragment"
+        android:name="com.denbase.newschallenge.ui.NewsSavedFragment"
+        android:label="@string/saved_news"
+        tools:layout="@layout/fragment_news_saved" >
+        <action
+            android:id="@+id/action_newsSavedFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">NewsChallenge</string>
+    <string name="sources">Sources</string>
+    <string name="news">News</string>
+    <string name="save">Save</string>
+    <string name="saved_news">Saved News</string>
+    <string name="detail">Detail</string>
+    <string name="news_sources">News Sources</string>
+    <string name="cd_article_title">Article Title</string>
+    <string name="cd_article_description">Article Description</string>
+    <string name="cd_article_image">Article Image</string>
+    <string name="cd_article_save">Article Save</string>
+    <string name="dummy_text">Dummy Text</string>
+    <string name="add_save_news">Added to Saved News</string>
+    <string name="delete_save_news">Deleted from Saved News</string>
+</resources>

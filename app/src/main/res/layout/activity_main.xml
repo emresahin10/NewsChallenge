@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <github.com.st235.lib_expandablebottombar.ExpandableBottomBar
+        android:id="@+id/expandable_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="10dp"
+        app:exb_backgroundColor="@color/mainOrange"
+        app:exb_backgroundCornerRadius="16dp"
+        app:exb_elevation="5dp"
+        app:exb_itemInactiveColor="#FFFFFF"
+        app:layout_behavior="github.com.st235.lib_expandablebottombar.behavior.ExpandableBottomBarScrollableBehavior" />
+
+    <fragment
+        android:id="@+id/fragment"
+
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/main_nav_graph" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
